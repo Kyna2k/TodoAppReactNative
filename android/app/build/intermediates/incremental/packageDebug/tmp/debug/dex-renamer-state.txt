@@ -1,10 +1,16 @@
-#Fri Sep 08 16:29:39 ICT 2023
-base.0=D\:\\GitHub\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=D\:\\GitHub\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=D\:\\GitHub\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+#Sat Sep 09 13:57:43 ICT 2023
+base.0=U\:\\GitHubProject\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=U\:\\GitHubProject\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=U\:\\GitHubProject\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.3=U\:\\GitHubProject\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
+base.4=U\:\\GitHubProject\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=14/classes.dex
+path.3=0/classes.dex
+path.4=classes2.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.2=classes3.dex
+renamed.3=classes4.dex
+renamed.4=classes5.dex
