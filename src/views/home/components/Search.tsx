@@ -36,7 +36,7 @@ export const Search: React.FC = () => {
   }
   return (
     <View style={useStyle.container}>
-      <TextInput/>
+      <TextInput style={useStyle.input} onChangeText={handleOnChange}/>
       <Pressable
         onPress={handleOnPressSearch}
        style={({pressed}) => [

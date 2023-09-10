@@ -1,24 +1,24 @@
 import { useState } from "react"
+import {TextInput as ReactTextInput, StyleSheet} from 'react-native';
+
 import { TextInputType } from "./type"
 
 
-
-export const TextInput : React.FC = ({...rest} : TextInputType) =>{
-    const [forcus, setforcus] = useState(false)
+export const TextInput = (props : TextInputType) =>{
+    const {style,...rest} = props;
+    const [focus, setFocus] = useState(false)
     const _onForcus = () =>{
-        setforcus(true);
+        setFocus(true);
     }
     const _onBlur = () =>{
-        setforcus(false)
+        setFocus(false)
     }
     return (
-        <TextInput
+        <ReactTextInput
         style = {[{
-            with : 100,
-            height : 50,
-            borderWidth : forcus ? 2 : 1,
-            padding : 10
-        }]}
+            borderColor: focus ? 'blue' : 'black',
+            borderWidth : 1,
+        },style]}
         onBlur={_onBlur}
         onFocus={_onForcus}
         {...rest}
