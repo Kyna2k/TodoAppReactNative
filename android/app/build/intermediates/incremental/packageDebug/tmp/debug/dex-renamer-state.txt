@@ -1,8 +1,8 @@
-#Sun Sep 10 21:01:41 ICT 2023
+#Mon Sep 11 15:51:00 ICT 2023
 base.0=U\:\\GitHubProject\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=D\:\\GitHub\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
-base.2=D\:\\GitHub\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.3=D\:\\GitHub\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.1=U\:\\GitHubProject\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
+base.2=U\:\\GitHubProject\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.3=U\:\\GitHubProject\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
 base.4=U\:\\GitHubProject\\TodoAppReactNative\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex

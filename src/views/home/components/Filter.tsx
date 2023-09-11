@@ -1,8 +1,9 @@
 import {CheckBox} from '@rneui/base';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {View, StyleSheet} from 'react-native';
-import {Text} from 'react-native-svg';
 import TitleCheckBox from '../../../common/components/text/TitleCheckBox';
+import { useDispatch } from 'react-redux';
+import { filterByStatus } from '../../../redux/actions';
 
 const useStyle = StyleSheet.create({
   container: {
@@ -11,7 +12,12 @@ const useStyle = StyleSheet.create({
 });
 
 export const Filter: React.FC = () => {
-  const [selectedIndex, setIndex] = useState('ALL');
+  const [selectedIndex, setIndex] = useState<string>('ALL');
+  const dispatch = useDispatch()
+  useEffect(() =>{
+
+    dispatch(filterByStatus(selectedIndex))
+  },[selectedIndex])
   return (
     <View style={useStyle.container}>
       <CheckBox

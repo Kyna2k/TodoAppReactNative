@@ -14,3 +14,22 @@ export const ListTodo = () =>{
         type : 'todoList/GetList',
     }
 }
+export const updateStatusTodo = (todo: TODO) => {
+    return {
+        type: 'todoList/updateTodo',
+        payload : todo,
+    }
+}
+
+export const searchFilterChange = (text: string) =>{
+    return {
+        type : 'filter/search',
+        payload : text
+    }
+}
+export const filterByStatus = (status: string) =>{
+    return {
+        type : 'filter/byStatus',
+        payload : status,
+    }
+}

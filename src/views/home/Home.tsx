@@ -9,7 +9,8 @@ import TitleCheckBox from '../../common/components/text/TitleCheckBox';
 import AddToDo from './components/AddTodo';
 import { useDispatch,useSelector } from 'react-redux';
 import { TODO } from '../../redux/reducer';
-import { GetListToDo } from './selector/selector';
+import { GetListToDo } from '../../redux/selector';
+import { ListTodo } from './components/ListToDo';
 
 const useStyle = StyleSheet.create({
   title: {
@@ -31,45 +32,13 @@ const useStyle = StyleSheet.create({
     padding: 10,
     borderRadius: 8,
   },
-  flatList : {
-    flex : 1
-  }
 });
 
 
 
 
 const HomeScreen: React.FC = () => {
-  const data = useSelector(GetListToDo);
-  const [checked, setChecked] = useState(data);
-  const renderItem : ListRenderItem<TODO> = ({item,index}) => {
-    const handleCheckTODO = () =>{
-      item.status = !item.status
-      checked[index] = item,
-      setChecked([...checked]);
-    }
-    return (
-      <View>
-        <CheckBox
-          checked={item.status}
-          onPress={handleCheckTODO}
-          // Use ThemeProvider to make change for all checkbox
-          iconType="material-community"
-          checkedIcon="checkbox-marked"
-          uncheckedIcon="checkbox-blank-outline"
-          checkedColor="deepskyblue"
-          containerStyle={{
-            width : '100%',
-            padding: 0,
-            marginStart : 0,
-            justifyContent: 'flex-start',
-          }}
-          
-          title={<TitleCheckBox title={item.name}/>}
-        />
-      </View>
-    );
-  };
+  
 
   return (
     <Container>
@@ -79,12 +48,7 @@ const HomeScreen: React.FC = () => {
       <Text style={useStyle.textSubTitle}>Filter By Status</Text>
       <Filter />
       <Text style={useStyle.textSubTitle}>List TODO</Text>
-      <FlatList 
-        style={useStyle.flatList}
-        data={data}
-        renderItem={renderItem}
-        keyExtractor={item => item.id.toString()}
-      />
+      <ListTodo/>
       <AddToDo/>
     </Container>
   );

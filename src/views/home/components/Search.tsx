@@ -3,6 +3,8 @@ import {Pressable, StyleSheet, View} from 'react-native';
 import SreachICon from '../../../assets/icons/serach';
 import { TextInput } from '../../../common/components/textinput/TextInput';
 import { Color } from '../../../common/themes/colors';
+import { useDispatch } from 'react-redux';
+import { searchFilterChange } from '../../../redux/actions';
 
 const useStyle = StyleSheet.create({
   container : {
@@ -30,20 +32,17 @@ const useStyle = StyleSheet.create({
 });
 
 export const Search: React.FC = () => {
-  const [keySearch, setKeySearch] = useState('hello');
-
+  const [keySearch, setKeySearch] = useState('');
+  const dispatch = useDispatch();
   const handleOnChange = (text: SetStateAction<string>) => {
     setKeySearch(text);
   };
   const handleOnPressSearch = () =>{
-    setKeySearch("hello");
-
-    console.log("hello");
-    
+    dispatch(searchFilterChange(keySearch))
   }
   return (
     <View style={useStyle.container}>
-      <TextInput style={useStyle.input} onChangeText={handleOnChange}/>
+      <TextInput style={useStyle.input} value={keySearch} onChangeText={handleOnChange}/>
       <Pressable
         onPress={handleOnPressSearch}
         style={({pressed}) => [

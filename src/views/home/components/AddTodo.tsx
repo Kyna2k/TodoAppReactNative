@@ -3,12 +3,12 @@ import { TextInput } from "../../../common/components/textinput/TextInput"
 import React, { SetStateAction, useId, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodoAction } from "../../../redux/actions";
-
-
+import 'react-native-get-random-values';
+import { v4 as uuidv4 } from 'uuid';
 
  const AddTodo : React.FC = () =>{
     const dispatch = useDispatch();
-    const id = Math.random();
+    const id = uuidv4();    ;
     const [value, setValue] = useState('');
     const handleOnChange = (text: SetStateAction<string>) => {
         setValue(text);
