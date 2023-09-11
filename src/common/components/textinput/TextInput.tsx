@@ -1,7 +1,8 @@
 import { useState } from "react"
-import {TextInput as ReactTextInput, StyleSheet} from 'react-native';
+import {TextInput as ReactTextInput} from 'react-native';
 
 import { TextInputType } from "./type"
+import { Color } from "../../themes/colors";
 
 
 export const TextInput = (props : TextInputType) =>{
@@ -16,7 +17,7 @@ export const TextInput = (props : TextInputType) =>{
     return (
         <ReactTextInput
         style = {[{
-            borderColor: focus ? 'blue' : 'black',
+            borderColor: focus ? 'black' : Color.fadeColor,
             borderWidth : 1,
         },style]}
         onBlur={_onBlur}
