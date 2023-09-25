@@ -2,19 +2,17 @@ import { FlatList, ListRenderItem, View } from "react-native";
 import TitleCheckBox from "../../../common/components/text/TitleCheckBox";
 import { CheckBox } from "@rneui/base";
 import { useDispatch, useSelector } from "react-redux";
-import {  GetListToDo, todoRemainingSelector } from "../../../redux/selector";
+import {  todoRemainingSelector } from "../../../redux/selector";
 import { TODO } from "../../../redux/reducer";
-import { useState } from "react";
-import { updateStatusTodo } from "../../../redux/actions";
-
+import { updateTodo } from "../../../redux/slice/todolistslice";
 export const ListTodo = () => {
   const data = useSelector(todoRemainingSelector);
   const dispatch = useDispatch();
-  
   const renderItem: ListRenderItem<TODO> = ({item, index}) => {
     const handleCheckTODO = () => {
       item.status = !item.status;
-      dispatch(updateStatusTodo(item));
+      console.log(item);
+      dispatch(updateTodo(item));
     };
     return (
       <View>

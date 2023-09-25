@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import {View, StyleSheet} from 'react-native';
 import TitleCheckBox from '../../../common/components/text/TitleCheckBox';
 import { useDispatch } from 'react-redux';
-import { filterByStatus } from '../../../redux/actions';
+import { byStatus } from '../../../redux/slice/filterslice';
 
 const useStyle = StyleSheet.create({
   container: {
@@ -16,7 +16,7 @@ export const Filter: React.FC = () => {
   const dispatch = useDispatch()
   useEffect(() =>{
 
-    dispatch(filterByStatus(selectedIndex))
+    dispatch(byStatus(selectedIndex))
   },[selectedIndex])
   return (
     <View style={useStyle.container}>

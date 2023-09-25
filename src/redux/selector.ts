@@ -29,8 +29,6 @@ export const todoRemainingSelector = createSelector(
                     status === "Completed"
                 )
             }
-            
-            
         })
         return newListTodo;
         

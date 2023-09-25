@@ -4,7 +4,8 @@ import SreachICon from '../../../assets/icons/serach';
 import { TextInput } from '../../../common/components/textinput/TextInput';
 import { Color } from '../../../common/themes/colors';
 import { useDispatch } from 'react-redux';
-import { searchFilterChange } from '../../../redux/actions';
+import { search } from '../../../redux/slice/filterslice';
+
 
 const useStyle = StyleSheet.create({
   container : {
@@ -38,7 +39,7 @@ export const Search: React.FC = () => {
     setKeySearch(text);
   };
   const handleOnPressSearch = () =>{
-    dispatch(searchFilterChange(keySearch))
+    dispatch(search(keySearch))
   }
   return (
     <View style={useStyle.container}>

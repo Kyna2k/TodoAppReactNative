@@ -50,10 +50,10 @@ export type TODO = {
 
 // }
 
-const rootReducer = combineReducers(
-   {
-    filter : filterReducer,
-    todoList : todoListReducer
-   }
-)
-export default rootReducer;
+// const rootReducer = combineReducers(
+//    {
+//     filter : filterReducer,
+//     todoList : todoListReducer
+//    }
+// )
+// export default rootReducer;

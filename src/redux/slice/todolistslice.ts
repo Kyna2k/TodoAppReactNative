@@ -17,23 +17,43 @@ const initState =  [
     },
 ]
 
-const todoListReducer = (state = initState, action: any) => {
-    switch (action.type) {
-        case 'todoList/addToDo':
-            console.log(action)
-            return  [
-                ...state,
-                action.payload
-            ]
-        case 'todoList/updateTodo':
-            const todoUpdate = state.findIndex(todo => todo.id == action.payload.id)
-            state[todoUpdate] = action.payload
-            return [
-                ...state
-            ]
-        default:
-            return state
+// const todoListReducer = (state = initState, action: any) => {
+//     switch (action.type) {
+//         case 'todoList/addToDo':
+//             console.log(action)
+//             return  [
+//                 ...state,
+//                 action.payload
+//             ]
+//         case 'todoList/updateTodo':
+//             const todoUpdate = state.findIndex(todo => todo.id == action.payload.id)
+//             state[todoUpdate] = action.payload
+//             return [
+//                 ...state
+//             ]
+//         default:
+//             return state
 
-    }
-}
-export default todoListReducer;
+//     }
+// }
+// export default todoListReducer;
+import { createSlice } from "@reduxjs/toolkit"; 
+const todolistSlice = createSlice({
+    name: 'todoList',
+    initialState: initState,
+    reducers: {
+        addToDo : (state, action) =>{
+            state.push(action.payload)
+        },
+        updateTodo : (state, action) =>{
+            const todoUpdate = state.findIndex(todo => todo.id == action.payload.id)
+            
+        
+            state[todoUpdate].status = action.payload.status;
+            console.log(state[todoUpdate]);
+        }
+    },
+})
+export const {addToDo,updateTodo} = todolistSlice.actions;
+
+export default todolistSlice.reducer;
