@@ -47,10 +47,7 @@ const todolistSlice = createSlice({
         },
         updateTodo : (state, action) =>{
             const todoUpdate = state.findIndex(todo => todo.id == action.payload.id)
-            
-        
-            state[todoUpdate].status = action.payload.status;
-            console.log(state[todoUpdate]);
+            state[todoUpdate].status = !action.payload.status;
         }
     },
 })

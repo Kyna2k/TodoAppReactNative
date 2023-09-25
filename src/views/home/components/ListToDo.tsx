@@ -10,8 +10,6 @@ export const ListTodo = () => {
   const dispatch = useDispatch();
   const renderItem: ListRenderItem<TODO> = ({item, index}) => {
     const handleCheckTODO = () => {
-      item.status = !item.status;
-      console.log(item);
       dispatch(updateTodo(item));
     };
     return (
